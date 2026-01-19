@@ -1,13 +1,9 @@
-# !pip install openai
-# !pip install python-dotenv
 from openai import OpenAI
 import os
 from dotenv import load_dotenv, find_dotenv
 
 # Load environment variables
-dotenv_path = find_dotenv()
-print(f"Loading .env from: {dotenv_path}")
-load_dotenv(dotenv_path)
+load_dotenv(find_dotenv())
 
 api_key = os.getenv('OPENAI_API_KEY')
 
@@ -19,5 +15,3 @@ api_key = api_key.strip('"').strip("'")
 
 # Initialize the OpenAI client
 client = OpenAI(api_key=api_key)
-
-print("✓ Key loaded successfully and client initialized.")

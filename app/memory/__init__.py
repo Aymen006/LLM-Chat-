@@ -1,0 +1,1 @@
+""" here we make and manage the memory for the app from autosave and memory updater and dialogue chunks """
